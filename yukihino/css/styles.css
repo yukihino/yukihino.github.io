@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.navbar {
+    position: absolute;
+    z-index: 999;
+    top: 25px;
+    right: 25px;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+
+/* ==================================================== */
+/* L O G O */
+/* ==================================================== */
+.logo {
+    position: absolute;
+    top: 45%;
+    transform: translateX(60%);
+    cursor: unset;
+}
+
+.nametag {
+    position: absolute;
+    top: 55%;
+    transform: translateX(365%);
+    cursor: unset;
+}
+
+/* ==================================================== */
+/* F R A M E */
+/* ==================================================== */
+.frame span {
+    position: fixed;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.ua-ie .frame span {
+    z-index: 10;
+}
+
+.frame span:first-child {
+    top: 25px;
+    left: 25px;
+    width: calc(100% - 50px);
+    height: 1px;
+}
+
+.frame span:nth-child(2) {
+    top: 25px;
+    left: 25px;
+    width: 1px;
+    height: calc(100% - 50px);
+}
+
+.frame span:nth-child(3) {
+    top: 25px;
+    right: 25px;
+    width: 1px;
+    height: calc(100% - 50px);
+}
+
+.frame span:last-child {
+    bottom: 25px;
+    left: 25px;
+    width: calc(100% - 50px);
+    height: 1px;
+}
+
+/* ==================================================== */
+/* V I D E O */
+/* ==================================================== */
+#backVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+@media(min-aspect-ratio: 16/9) {
+    #backVideo {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-aspect-ratio: 16/9) {
+    #backVideo {
+        width: auto;
+        height: 100%;
+    }
+}
