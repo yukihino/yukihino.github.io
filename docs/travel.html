@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="sheets/main.css">
+        <title>TRAVEL</title>
+        <meta name="description" content="Ernest、Ernest Tan Blog">
+        <meta name="keywords" content="Ernest,Ernest Tan Blog,Ernest Tan Web,Ernest ブログ">
+        <link rel="shortcut icon" href="images/favicon.ico">
+    </head>
+    <body>
+        <!--Background Here-->
+        <div class="container" id="bg">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FWXptzZNDjI?autoplay=1&vq=hd1080&controls=0&showinfo=0&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!--Navigation Here-->
+        <div class="container" id="nav">
+            <div class="content">
+                <div class="list">
+                    <a href="index.html">HOME</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="#">TRAVEL</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Content Here-->
+        <div class="content" id="home" style="z-index: 999;">
+            <div class="image-box">
+                <img src="../docs/images/pic1.jpg" alt="">
+
+                <ul>
+                    <li class="btn">01</li>
+                    <li class="btn active">02</li>
+                    <li class="btn">03</li>
+                    <li class="btn">04</li>
+                </ul>
+            </div>
+            <div class="textinfo-box">
+                <h1>AKIHABARA</h1>
+            </div>
+            <div class="textinformation-box">
+                <h5>Akihabara (Japanese: 秋葉原) is a common name for the area around Akihabara Station in the Chiyoda ward of Tokyo, Japan. Administratively, the area called Akihabara mainly belongs to the Sotokanda (外神田) and Kanda-Sakumachō districts in Chiyoda. There exists an administrative district called Akihabara in the Taitō ward further north of Akihabara Station, but it is not the place people generally refer to as Akihabara.
+
+                    The name Akihabara is a shortening of Akibagahara (秋葉ヶ原), which ultimately comes from Akiba (秋葉), named after a fire-controlling deity of a firefighting shrine built after the area was destroyed by a fire in 1869.[1]</h5>
+            </div>
+        </div>
+        <script>
+            var btn = document.getElementsByClassName("btn")
+            var image = document.getElementById("image")
+
+            var images = new Array(
+                "images/pic1.jpg",
+                "images/pic2.jpg",
+                "images/pic3.jpg",
+                "images/pic4.jpg",
+            );
+
+            for(let i=0; i<btn.length; i++){
+                btn[i].onclick = function()
+                {
+                    image.src = images[i];
+                    let current = document.getElementsByClassName("active")
+                    current[0].className = current[0].className.replace("active")
+                    this.className += "active";
+                };
+            }
+        </script>
+    </body>
+</html>
